@@ -1,8 +1,8 @@
-# Version 1: Iterative Fibonacci
+# Version 2: Recursive Fibonacci
 def fibonacci(n):
-    a, b = 0, 1
-    for _ in range(n):
-        print(a, end=' ')
-        a, b = b, a + b
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
 
-fibonacci(10)
+for i in range(10):
+    print(fibonacci(i), end=' ')
